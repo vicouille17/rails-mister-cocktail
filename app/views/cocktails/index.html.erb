@@ -1,0 +1,11 @@
+<div class="title">
+<h1>La liste des quoquetelles</h1>
+</div>
+<p>Fait maison avec amour et passion, issue de l'agriculture biologique</p>
+<% @cocktails.each do |cocktail| %>
+  <h2><%= link_to cocktail.name, cocktail %></h2>
+
+
+<% end %>
+<p><%= link_to "Ajouter un quoquetelle", new_cocktail_path %></p>
+

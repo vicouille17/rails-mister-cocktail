@@ -1,0 +1,15 @@
+<h1>Detail of our quoquetelle</h1>
+<p><%= @cocktail.name %></p>
+<ul>
+
+<% @cocktail.doses.each_with_index do |dose,index| %>
+<li>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+</li>
+<% end %>
+</ul>
+
+
+
+<%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail) %>

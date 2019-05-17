@@ -1,0 +1,13 @@
+<%= simple_form_for([@cocktail, @dose]) do |a| %>
+  <%= a.error_notification %>
+  <%= a.error_notification message: a.object.errors[:base].to_sentence if a.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= a.association :ingredient %>
+  </div>
+
+  <div class="form-actions">
+    <%= a.input :description %>
+    <%= a.button :submit, class: "btn btn-primary"%>
+  </div>
+<% end %>
